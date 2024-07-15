@@ -14,7 +14,7 @@ After the initial comment, let us start by creating a new admin user with sudo p
 
 ```bash
 users:
-  - name: codeagency
+  - name: adcotech
     groups: users, admin, docker
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
@@ -57,7 +57,7 @@ package_upgrade: true
   - sed -i -e '/^\(#\|\)X11Forwarding/s/^.*$/X11Forwarding no/' /etc/ssh/sshd_config
   - sed -i -e '/^\(#\|\)AllowAgentForwarding/s/^.*$/AllowAgentForwarding no/' /etc/ssh/sshd_config
   - sed -i -e '/^\(#\|\)AuthorizedKeysFile/s/^.*$/AuthorizedKeysFile .ssh\/authorized_keys/' /etc/ssh/sshd_config
-  - sed -i '$a AllowUsers codeagency' /etc/ssh/sshd_config
+  - sed -i '$a AllowUsers adcotech' /etc/ssh/sshd_config
 ```
 
 ## Generate a new SSH key
